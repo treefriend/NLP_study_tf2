@@ -3,8 +3,9 @@
 #  @Author  : Shupeng
 
 import tensorflow as tf
-from PositionEncoder import PositionEncoder
+
 from EncoderLayer import EncoderLayer
+from PositionEncoder import PositionEncoder
 
 
 class Encoder(tf.keras.layers.Layer):

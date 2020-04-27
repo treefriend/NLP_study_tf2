@@ -2,8 +2,9 @@
 #  @Time    : 2020-04-25 18:04
 #  @Author  : Shupeng
 
-import tensorflow_datasets as tfds
 import tensorflow as tf
+import tensorflow_datasets as tfds
+
 from config import *
 
 
@@ -40,7 +41,7 @@ def filter_max_length(x, y, max_length=max_length):
 
 
 def get_train_dataset(tokenizer_pt, tokenizer_en, train_examples, buffer_size, batch_size):
-    def encode(lang1, lang2): # lang1: pt, lang2: en
+    def encode(lang1, lang2):  # lang1: pt, lang2: en
         lang1 = [tokenizer_pt.vocab_size] + tokenizer_pt.encode(lang1.numpy()) + [tokenizer_pt.vocab_size + 1]
         lang2 = [tokenizer_en.vocab_size] + tokenizer_en.encode(lang2.numpy()) + [tokenizer_en.vocab_size + 1]
         return lang1, lang2
@@ -65,7 +66,7 @@ def get_train_dataset(tokenizer_pt, tokenizer_en, train_examples, buffer_size, b
             .prefetch(tf.data.experimental.AUTOTUNE))
 
 
-def get_val_dataset(tokenizer_pt, tokenizer_en,val_examples, batch_size):
+def get_val_dataset(tokenizer_pt, tokenizer_en, val_examples, batch_size):
     # 这里将encode,tf_encode和get_val_proc作为get_val_dataset的内部函数
     # 其实这里遇到了问题，就是在get_train_dataset里面也要写一份
     def encode(lang1, lang2):

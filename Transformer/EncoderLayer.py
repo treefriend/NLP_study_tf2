@@ -3,7 +3,8 @@
 #  @Author  : Shupeng
 
 import tensorflow as tf
-from tensorflow.keras.layers import Layer, Dense
+from tensorflow.keras.layers import Layer
+
 from MultiHeadAttention import MultiHeadAttention
 
 

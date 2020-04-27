@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23063d4e-fbf2-4109-93f0-fd76b594bcbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+    <list default="true" id="23063d4e-fbf2-4109-93f0-fd76b594bcbf" name="Default Changelist" comment="Initial Commit following Google's codes">
+      <change afterPath="$PROJECT_DIR$/.idea/Transformer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DecoderLayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-              <folding>
-                <element signature="e#76#99#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="532">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -33,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/Encoder.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
-              <caret line="26" column="36" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="36" />
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -41,11 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="26" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="26" />
-              <folding>
-                <element signature="e#76#99#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="551">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -53,20 +52,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EncoderLayer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="494">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="198" column="30" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Transformer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/train.py">
+        <entry file="file://$PROJECT_DIR$/pt_encoder.subwords">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="189" column="28" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
-              <folding>
-                <element signature="e#76#99#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="319">
+              <caret line="1655" column="4" lean-forward="true" selection-start-line="1655" selection-start-column="4" selection-end-line="1655" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -98,15 +112,15 @@
         <option value="$PROJECT_DIR$/PositionEncoder.py" />
         <option value="$PROJECT_DIR$/Encoder.py" />
         <option value="$PROJECT_DIR$/Decoder.py" />
-        <option value="$PROJECT_DIR$/Transformer.py" />
         <option value="$PROJECT_DIR$/MultiHeadAttention.py" />
         <option value="$PROJECT_DIR$/DecoderLayer.py" />
         <option value="$PROJECT_DIR$/data_util.py" />
         <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/Transformer.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="671" />
     <option name="y" value="24" />
     <option name="width" value="1680" />
@@ -138,6 +152,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="copyright" />
@@ -309,13 +324,22 @@
       <updated>1587807765043</updated>
       <workItem from="1587807766366" duration="1077000" />
       <workItem from="1587809114548" duration="36392000" />
+      <workItem from="1587972227043" duration="255000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit following Google's codes">
+      <created>1587972372209</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587972372209</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37469000" />
+    <option name="totallyTimeSpent" value="37724000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -325,52 +349,65 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="37" width="1680" height="1027" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2045177" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20695971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3291536" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32810867" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.33552632" />
-      <window_info anchor="right" x="0" y="0" width="370" height="827" id="Documentation" sideWeight="0.50165015" side_tool="true" visible="true" weight="0.1904762" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.33552632" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49834985" visible="true" weight="0.1904762" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.49688473" visible="true" weight="0.1904762" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" x="0" y="0" width="370" height="827" id="Documentation" order="6" sideWeight="0.50311524" side_tool="true" visible="true" weight="0.1904762" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Initial Commit following Google's codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit following Google's codes" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/MultiHeadAttention.py</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Decoder.py</url>
-          <line>32</line>
+          <line>34</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/data_util.py</url>
-          <line>123</line>
+          <line>124</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -384,9 +421,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config" />
     <entry file="file://$USER_HOME$/opt/anaconda3/envs/tf2_nightly/lib/python3.6/site-packages/tensorflow/python/data/ops/dataset_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1818">
@@ -408,13 +443,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ScaledDotProductAttention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ScaledDotProductAttention.py" />
     <entry file="file://$USER_HOME$/opt/anaconda3/envs/tf2_nightly/lib/python3.6/site-packages/tensorflow/python/ops/gen_array_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
@@ -457,18 +486,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pt_encoder.subwords">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/en_encoder.subwords">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EncoderLayer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="36" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/opt/anaconda3/envs/tf2_nightly/lib/python3.6/site-packages/tensorflow/python/ops/script_ops.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -494,23 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="26" />
-          <folding>
-            <element signature="e#76#99#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1645">
@@ -531,30 +533,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Transformer.py">
+    <entry file="file://$PROJECT_DIR$/DecoderLayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="532">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DecoderLayer.py">
+    <entry file="file://$PROJECT_DIR$/Encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="e#76#99#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="456">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EncoderLayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="189" column="28" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
-          <folding>
-            <element signature="e#76#99#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="302">
+          <caret line="198" column="30" selection-start-line="198" selection-start-column="30" selection-end-line="198" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Transformer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pt_encoder.subwords">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="1655" column="4" lean-forward="true" selection-start-line="1655" selection-start-column="4" selection-end-line="1655" selection-end-column="4" />
         </state>
       </provider>
     </entry>

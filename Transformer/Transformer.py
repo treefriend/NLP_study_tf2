@@ -3,8 +3,9 @@
 #  @Author  : Shupeng
 
 import tensorflow as tf
-from Encoder import Encoder
+
 from Decoder import Decoder
+from Encoder import Encoder
 
 
 class Transformer(tf.keras.models.Model):
@@ -13,10 +14,10 @@ class Transformer(tf.keras.models.Model):
         super(Transformer, self).__init__()
 
         self.encoder = Encoder(num_layers, d_model, num_heads, dff,
-                                    input_vocab_size, pe_input, drop_rate)
+                               input_vocab_size, pe_input, drop_rate)
 
         self.decoder = Decoder(num_layers, d_model, num_heads, dff,
-                                    target_vocab_size, pe_target, drop_rate)
+                               target_vocab_size, pe_target, drop_rate)
 
         self.final_layer = tf.keras.layers.Dense(target_vocab_size)
 
@@ -47,4 +48,4 @@ if __name__ == '__main__':
                                    enc_padding_mask=None,
                                    look_ahead_mask=None,
                                    dec_padding_mask=None)
-    print('fn_out.shape',fn_out.shape)
+    print('fn_out.shape', fn_out.shape)
