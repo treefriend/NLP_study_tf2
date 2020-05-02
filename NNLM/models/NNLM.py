@@ -15,15 +15,15 @@ class NNLM(tf.keras.models.Model):
         self.embedding_dim = M
         self.hidden_unit = H
 
-        # self.input_layer=tf.keras.layers.Input(self.vcoab_size)
-        self.embedding_layer = tf.keras.layers.Dense(self.embedding_dim, use_bias=False, activation=None)
+        #self.input_layer = tf.keras.layers.Input(batch =self.vocab_size)
+        self.embedding_layer = tf.keras.layers.Embedding(input_dim=self.vocab_size,output_dim=self.embedding_dim)
         self.hidden_layer = tf.keras.layers.Dense(self.hidden_unit, activation='tanh')
-        self.outupt_layer = tf.keras.layers.Dense(self.vocab_size, activation='softmax')
+        self.output_layer = tf.keras.layers.Dense(self.vocab_size, activation='softmax')
 
-    def call(self, inputs, **kwargs):
-        x = input(inputs)
-        x_embs = [self.embedding_layer(x) for _ in range(self.n_gram)]
-        x_total = tf.keras.layers.concatenate(x)
-        h = self.hidden_layer(x_total)
+    def call(self, x, **kwargs):
+        #x = self.input_layer(inputs)
+        x = self.embedding_layer(x)
+        x=tf.keras.layers.Flatten()(x)
+        h = self.hidden_layer(x)
         fc = self.output_layer(h)
-        return np.argmax(fc)
+        return fc
