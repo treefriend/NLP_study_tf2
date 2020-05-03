@@ -31,7 +31,7 @@ class DataProcessor(object):
     def __init__(self, debug=False):
         self.get_dataset()
         if debug:
-            self.dataset = brown.words()[:2000]
+            self.dataset = brown.words()[:20000]
         else:
             self.dataset = brown.words()
         self.stopwords = stopwords.words('english')

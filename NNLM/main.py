@@ -4,9 +4,6 @@ import tensorflow as tf
 import models.NNLM as nnlm
 import models.config as cfg
 import models.data_proc as data
-import time
-
-# load dataset
 
 if __name__ == '__main__':
     dp = data.DataProcessor(debug=False)
@@ -36,67 +33,51 @@ if __name__ == '__main__':
     # create model
     nnlm = nnlm.NNLM(N=cfg.N, V=vocab_size, M=cfg.M, H=cfg.H)
 
-    # create optimizer
-    optimizer = tf.keras.optimizers.Adam(learning_rate=0.001,
-                                         beta_1=0.9,
-                                         beta_2=0.98,
-                                         epsilon=1e-9)
+    nnlm.compile(optimizer='adam', loss='sparse_categorical_crossentropy',
+                 metrics=['sparse_categorical_crossentropy', 'accuracy'])
 
-    # create loss function
-    # 这里之前用的CategoricalCrossentropy，搞错了
-    # 看源码可以直到CategoricalCrossentropy是对应one-hot类型的标签的
-    # SparseCategoricalCrossentropy是对应分类编号的标签的
-    # 还是要看源码，tf的代码写的好哇，特别是注释
-    loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
+    history = nnlm.fit(train_ds, epochs=cfg.epochs, verbose=True)
 
-
-    def loss_function(real, pred):
-        mask = tf.math.logical_not(tf.math.equal(real, word2index[cfg.MASK_TOKEN]))
-        loss_ = loss_object(real, pred)
-        mask = tf.cast(mask, dtype=loss_.dtype)
-        loss_ *= mask
-        return tf.reduce_sum(loss_) / tf.reduce_sum(mask)
-
-
-    train_loss = tf.keras.metrics.Mean(name='train_loss')
-    train_accuracy = tf.keras.metrics.CategoricalAccuracy(name='train_accuracy')
-
-
-    # checkpoint
-    @tf.function()
-    def train_step(input, target):
-        with tf.GradientTape() as tape:
-            predictions = nnlm(input)
-            loss = loss_function(target, predictions)
-
-        gradients = tape.gradient(loss, nnlm.trainable_variables)
-        optimizer.apply_gradients(zip(gradients, nnlm.trainable_variables))
-        print('loss', loss)
-        train_loss(loss)
-        train_accuracy(target, predictions)
-
-
-    for (batch, (input, target)) in enumerate(test_ds):
-        print(batch)
-        pred = nnlm(input)
-        print('pred for batch {}'.format(batch))
-        print(pred)
-
-    for epoch in range(cfg.epochs):
-        start = time.time()
-        train_loss.reset_states()
-        train_accuracy.reset_states()
-
-        for (batch, (input, target)) in enumerate(train_ds):
-            train_step(input, target)
-
-            print('Epoch {} Batch {} Loss {:.4f} Accuracy {:.4f}'.format(
-                epoch + 1, batch, train_loss.result(), train_accuracy.result()
-            ))
-
-    # early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3)
-    #
-    # nnlm.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
-    #
-    # history = nnlm.fit(train_ds, epochs=cfg.epochs, callbacks=early_stopping,
-    #                    validation_data=test_ds, verbose=True)
+    '''
+    Epoch 1/20
+    4069/4069 [==============================] - 79s 19ms/step - loss: 0.9150 - sparse_categorical_crossentropy: 0.9150 - accuracy: 0.9463
+    Epoch 2/20
+    4069/4069 [==============================] - 79s 19ms/step - loss: 0.6799 - sparse_categorical_crossentropy: 0.6799 - accuracy: 0.9465
+    Epoch 3/20
+    4069/4069 [==============================] - 81s 20ms/step - loss: 0.6337 - sparse_categorical_crossentropy: 0.6337 - accuracy: 0.9466
+    Epoch 4/20
+    4069/4069 [==============================] - 79s 19ms/step - loss: 0.5995 - sparse_categorical_crossentropy: 0.5995 - accuracy: 0.9471
+    Epoch 5/20
+    4069/4069 [==============================] - 79s 19ms/step - loss: 0.5684 - sparse_categorical_crossentropy: 0.5684 - accuracy: 0.9487
+    Epoch 6/20
+    4069/4069 [==============================] - 79s 20ms/step - loss: 0.5361 - sparse_categorical_crossentropy: 0.5361 - accuracy: 0.9510
+    Epoch 7/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.5060 - sparse_categorical_crossentropy: 0.5060 - accuracy: 0.9535
+    Epoch 8/20
+    4069/4069 [==============================] - 79s 20ms/step - loss: 0.4796 - sparse_categorical_crossentropy: 0.4796 - accuracy: 0.9585
+    Epoch 9/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4583 - sparse_categorical_crossentropy: 0.4583 - accuracy: 0.9612
+    Epoch 10/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4424 - sparse_categorical_crossentropy: 0.4424 - accuracy: 0.9623
+    Epoch 11/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4339 - sparse_categorical_crossentropy: 0.4339 - accuracy: 0.9627
+    Epoch 12/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4278 - sparse_categorical_crossentropy: 0.4278 - accuracy: 0.9630
+    Epoch 13/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4240 - sparse_categorical_crossentropy: 0.4240 - accuracy: 0.9632
+    Epoch 14/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4226 - sparse_categorical_crossentropy: 0.4226 - accuracy: 0.9634
+    Epoch 15/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4222 - sparse_categorical_crossentropy: 0.4222 - accuracy: 0.9635
+    Epoch 16/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4209 - sparse_categorical_crossentropy: 0.4209 - accuracy: 0.9636
+    Epoch 17/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4190 - sparse_categorical_crossentropy: 0.4190 - accuracy: 0.9637
+    Epoch 18/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4191 - sparse_categorical_crossentropy: 0.4191 - accuracy: 0.9637
+    Epoch 19/20
+    4069/4069 [==============================] - 80s 20ms/step - loss: 0.4210 - sparse_categorical_crossentropy: 0.4210 - accuracy: 0.9636
+    Epoch 20/20
+    4069/4069 [==============================] - 79s 19ms/step - loss: 0.4205 - sparse_categorical_crossentropy: 0.4205 - accuracy: 0.9636
+    
+    '''
