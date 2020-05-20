@@ -79,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pt_encoder.subwords">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="1655" column="4" lean-forward="true" selection-start-line="1655" selection-start-column="4" selection-end-line="1655" selection-end-column="4" />
+            <state relative-caret-position="441">
+              <caret line="1662" column="7" lean-forward="true" selection-start-line="1662" selection-start-column="7" selection-end-line="1662" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -100,6 +100,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -324,7 +325,7 @@
       <updated>1587807765043</updated>
       <workItem from="1587807766366" duration="1077000" />
       <workItem from="1587809114548" duration="36392000" />
-      <workItem from="1587972227043" duration="255000" />
+      <workItem from="1587972227043" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit following Google's codes">
       <created>1587972372209</created>
@@ -337,7 +338,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37724000" />
+    <option name="totallyTimeSpent" value="37985000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -577,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pt_encoder.subwords">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="1655" column="4" lean-forward="true" selection-start-line="1655" selection-start-column="4" selection-end-line="1655" selection-end-column="4" />
+        <state relative-caret-position="441">
+          <caret line="1662" column="7" lean-forward="true" selection-start-line="1662" selection-start-column="7" selection-end-line="1662" selection-end-column="7" />
         </state>
       </provider>
     </entry>
